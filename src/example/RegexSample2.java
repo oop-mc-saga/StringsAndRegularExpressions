@@ -20,13 +20,13 @@ public class RegexSample2 {
         for (String d : dates) {
             Matcher m = p.matcher(d);
             while (m.find()) {
+                int n = m.groupCount();//number of matched positions
+                StringJoiner sj = new StringJoiner("/");
                 String str = m.group(1);
-                String year = m.group(2);
-                String month = m.group(3);
-                String day = m.group(4);
-                StringJoiner sj = new StringJoiner("/", "(", ")");
-                sj.add(year).add(month).add(day);
-                System.out.println(str + "->" + sj.toString());
+                for(int i=2;i<=n;i++){
+                    sj.add(m.group(i));
+                }
+                System.out.println(str + " -> " + sj.toString());
             }
         }
     }

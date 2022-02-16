@@ -14,15 +14,15 @@ public class RegexSample {
      */
     public static void main(String[] args) {
         String input = "0010111010011";
-        //正規表現の定義
+        //Define regular expression
         Pattern p = Pattern.compile("101+");
         Matcher m = p.matcher(input);
-        int c = 0;//探索開始位置
-        while (m.find(c)) {//位置を指定して探索
-            c = m.start();//パターンを発見した位置
+        int c = 0;//starting point of matching
+        while (m.find(c)) {//matching by starting point
+            c = m.start();//matched point
             String s = m.group();
             System.out.println("matches "+s + " at " + c);
-            c++;//探索位置を一つ進める
+            c++;//next matching
         }
     }
 
