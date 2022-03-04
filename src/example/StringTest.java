@@ -11,9 +11,9 @@ public class StringTest {
      */
     public static void main(String[] args) {
         String a = "abc";
-        String b = "abc";
+        String b = a;
         String c = "ab";
-        String d = "ab";
+        String d = c;
         c = c + "c";
         if (a == b) {
             System.out.println("a is the same object of b");
