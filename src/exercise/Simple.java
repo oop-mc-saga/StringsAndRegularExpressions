@@ -14,7 +14,7 @@ public class Simple {
      */
     public static void main(String[] args) {
         String input = "1100100100001";
-        Pattern p = Pattern.compile("1((00)+)1");//Define regular expression
+        Pattern p = Pattern.compile("1(00)+1");//Define regular expression
         Matcher m = p.matcher(input);
         int k = 0;
         while (m.find(k)) {
