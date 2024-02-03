@@ -1,4 +1,4 @@
-package example;
+package examples;
 
 import java.util.StringJoiner;
 import java.util.regex.Matcher;
